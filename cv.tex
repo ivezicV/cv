@@ -95,13 +95,18 @@
 	style=authoryear,
 	sorting=ydnt,
 	giveninits=true,
-	maxnames=5, minnames=5,
-	maxbibnames=5, minbibnames=5,
+	maxnames=6, minnames=6,
+	maxbibnames=6, minbibnames=6,
 	doi=false, isbn=false, url=false,
 	date=year,
 	dashed=false
 ]{biblatex}
 \addbibresource{citations.bib}
+\addbibresource{patents.bib}
+
+
+
+
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
@@ -287,6 +292,25 @@ B.A. Computer Science& \hfill  \textit{GPA 3.74} \\
 \nocite{*}
 \printbibliography[heading=none]
 \end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	PATENTS
+%----------------------------------------------------------------------------------------
+\section{Patents}
+\begin{refsection}[patents.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+% \section{Patents}
+% % apply local override for the *next* bibliography only
+% \AtNextBibliography{%
+%   \setcounter{maxnames}{8}%
+%   \setcounter{minnames}{8}%
+% }
+% \nocite{*} % if you want to include all patent entries
+% \printbibliography[heading=none, keyword=patent]
+
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
