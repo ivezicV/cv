@@ -54,7 +54,14 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
+% \usepackage[scale=0.9]{geometry}
 \usepackage[scale=0.9]{geometry}
+% \usepackage[
+%     top=0.4in,
+%     bottom=0.4in,
+%     left=0.5in,
+%     right=0.5in
+% ]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -79,7 +86,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{5pt}{10pt}
 
 %for publications
 % \usepackage[style=authoryear,sorting=ynt, maxbibnames=5, maxnames=5]{biblatex}
@@ -101,11 +108,13 @@
 	date=year,
 	dashed=false
 ]{biblatex}
-\addbibresource{citations.bib}
+\addbibresource{selected_citations.bib}
 \addbibresource{patents.bib}
 
-
-
+\defbibenvironment{bibliography}
+  {\list{}{\leftmargin=1.5em\itemindent=0pt\itemsep=0.1em\parsep=0pt}}
+  {\endlist}
+  {\item[{\tiny$\bullet$}\hspace{0.2em}]}
 
 
 %Setup hyperref package, and colours for links
@@ -192,9 +201,10 @@
 % EXPERIENCE SECTIONS
 %----------------------------------------------------------------------------------------
 
+Ph.D student in Medical Informatics at UCLA with experience developing representation learning models for multimodal biomedical data, including cytology, ultrasound, and wearables. Demonstrated expertise in Python, PyTorch, and large-scale self-supervised learning. Proven track record in building scalable AI systems for healthcare applications, with a focus on improving model generalization and robustness in low-resource clinical settings. Proven track record of publications and workshop papers in top venues such as CVPR, MICCAI, and JAMIA.
 %Interests/ Keywords/ Summary
 % \section{Summary}
-Deep learning researcher pursuing a PhD in Medical Informatics with experience in deep learning applications to medicine, particularly in wearable sensor data and imaging based cancer research. Interested in developing multi-modal and foundational models with a strong interest in self-supervised learning for representation learning across diverse biomedical data, including time series and large medical images. Proven track record of publishing in reputable conferences and journals.
+% Deep learning researcher pursuing a PhD in Medical Informatics with experience in deep learning applications to medicine, particularly in wearable sensor data and imaging based cancer research. Interested in developing multi-modal and foundational models with a strong interest in self-supervised learning for representation learning across diverse biomedical data, including time series and large medical images. Proven track record of publishing in reputable conferences and journals.
 
 
 % Deep learning researcher with a strong foundation in computer science and a track record of publishing in top conferences. Experienced in applying AI to wearable data and cancer research, with expertise in computer vision, multi-modal learning, and self-supervised methods. Passionate about advancing digital health and precision medicine through scalable, generalizable machine learning solutions, and eager to contribute to innovative projects at the intersection of healthcare and AI.
@@ -222,38 +232,65 @@ B.A. Computer Science& \hfill  \textit{GPA 3.74} \\
 
 
 
+%----------------------------------------------------------------------------------------
+%	Publications/Patents
+%----------------------------------------------------------------------------------------
+\section{Publications}
+\begin{refsection}[selected_citations.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+\textit{*Co-first authors. Please see more on \href{https://scholar.google.com/citations?user=xUyQJkcAAAAJ&hl=en}{Google Scholar}.}
+
+%----------------------------------------------------------------------------------------
+%	Experience
+%----------------------------------------------------------------------------------------
+
+
 %Experience
 \section{Experience}
 
 \begin{joblong}{Medical Informatics PhD Student - UCLA}{Sept 2022 - Present}{Biomedical AI Research Lab, University of California, Los Angeles}
-\item Developing an automated assistance pipeline for thyroid cancer diagnosis 
-\item Improving thyroid cancer risk stratification of cytological biopsy images using deep learning methods
-\item Developing a foundational model for Fitbit data using large language models 
-\item Statistics and predictive modeling for an in-house heart failure Fitbit dataset
+\item Developing an automated thyroid cancer diagnostic pipeline  using radiology and cytology image analysis
+\item Improving thyroid cancer risk stratification from cytological biopsy images with deep learning techniques
+\item Building a Fitbit foundation model by integrating temporal patterns with large language models
+\item Performing statistical analysis and predictive modeling on a private heart failure Fitbit dataset
+% \item Developing an automated assistance pipeline for thyroid cancer diagnosis 
+% \item Improving thyroid cancer risk stratification of cytological biopsy images using deep learning methods
+% \item Developing a foundational model for Fitbit data using large language models 
+% \item Statistics and predictive modeling for an in-house heart failure Fitbit dataset
 \end{joblong}
 
 \begin{joblong}{Undergraduate Researcher}{Sept. 2020 - May 20222}{Troyanskaya Lab, Princeton University}
-\item Built cell type specific functional networks using Bayesian integration for gene prediction
-\item Leveraged the networks and machine learning techniques to predict kidney disease relevant genes
-\item Evaluated machine learning methods for cell type prediction in single cell and single nucleus sequencing data
-\item Examined differential gene expression data across diseased kidney cells using Seurat
+\item Developed cell type–specific functional gene networks through Bayesian data integration to enhance gene prediction accuracy
+\item Leveraged machine learning to prioritize candidate genes relevant to kidney disease mechanisms
+\item Benchmarked cell type prediction methods across single-cell and single-nucleus RNA-seq datasets 
+\item Analyzed differential gene expression to identify molecular changes across diseased kidney cell types
+% \item Built cell type specific functional networks using Bayesian integration for gene prediction
+% \item Leveraged the networks and machine learning techniques to predict kidney disease relevant genes
+% \item Evaluated machine learning methods for cell type prediction in single cell and single nucleus sequencing data
+% \item Examined differential gene expression data across diseased kidney cells using Seurat
 \end{joblong}
 
 
 
 \begin{joblong}{Research Intern}{June 2021 - April 2022}{Jarosz Lab, Stanford University}
-\item Analyzed FASTQ data from yeast strains to identify gene essentiality and generate gene networks
-\item Employed statistical methods to evaluate gene correlations with prion phenotypes
+\item Analyzed FASTQ sequencing data from yeast strains to identify gene essentiality and construct gene interaction networks
+\item Applied statistical and computational methods to evaluate gene correlations associated with prion phenotypes
+% \item Analyzed FASTQ data from yeast strains to identify gene essentiality and generate gene networks
+% \item Employed statistical methods to evaluate gene correlations with prion phenotypes
 \end{joblong}
 
 \begin{joblong}{Research Intern}{June 2019 - Aug. 2019}{Tolić Group, Insitute Ruder Bošković, Zagreb, Croatia}
-\item Examined and videoed mitotic spindles in pro-metaphase and metaphase
-\item Leveraged transfection, cell splitting, and tagging methods to analyze PRC1 in pro-metaphase
+\item Imaged and analyzed mitotic spindles during pro-metaphase and metaphase to study spindle dynamics.
+% \item Examined and videoed mitotic spindles in pro-metaphase and metaphase
+\item Utilized transfection, cell splitting, and protein tagging methods to analyze PRC1 in pro-metaphase
 \end{joblong}
 
 \begin{joblong}{Research Intern}{June 2017 - Aug. 2017}{Intellectual Ventures Laboratory - Bellevue, WA}
 \item Co-Inventor: “Methods and System for Concentration of Samples for Lateral Flow Assays”
-\item Helped develop new diagnostics to accurately and rapidly identify tuberculosis infection
+\item Developed diagnostic assays to enable rapid and accurate identification of tuberculosis infection
+% \item Helped develop new diagnostics to accurately and rapidly identify tuberculosis infection
 \end{joblong}
 
 
@@ -263,25 +300,27 @@ B.A. Computer Science& \hfill  \textit{GPA 3.74} \\
 
 \section{Projects}
 
-\begin{projectlong}{Classification of thyroid ultrasound videos}{Sept. 2025 - present}
-    \item Leverage image foundation models to create a multiple video malignancy classification model
-    % \item Novel integration of ultrasound videos with radiological reports with application to improved cancer risk stratification
-\end{projectlong}
+% \begin{projectlong}{Classification of thyroid ultrasound videos}{Sept. 2025 - present}
+%     \item Leverage image foundation models to create a multiple video malignancy classification model
+%     % \item Novel integration of ultrasound videos with radiological reports with application to improved cancer risk stratification
+% \end{projectlong}
 
 \begin{projectlong}{Robust cytological image representation learning}{Feb. 2025 - present}
-    \item Developed the first cytology foundation model through fine tuning an iBOT model on a curated dataset
-    \item Robust cytology specific image representations generalizable to unseen data
+    \item Developed the first cytology foundation model using self-supervised learning 
+    \item Curated the largest cytology dataset of 1.4 million images using public and private datasets
+    \item Outperformed natural image and histopathology foundation models on 2 out of 3 tasks
 \end{projectlong}
 
 \begin{projectlong}{Wearable device adherence in heart failure patients}{Feb. 2023 - Sept. 2024}
-    \item Performed statistical evaluation to identify financial incentive improves adherence to monitoring devices
-    \item Identified increased heart failure symptom severity correlated with fewer steps
+    \item Led data processing and statistical analysis for a randomized controlled trial 
+    \item Evaluated digital monitoring adherence in heart failure patients
+    \item Identified signal patterns and adherence trends from Fitbit and symptom-tracking survey data
 \end{projectlong}
 
-\begin{projectlong}{A Fitbit foundation model}{Jan. 2025 - present}
-    \item Developing a transformer based Fitbit foundation model using ~36k participants from the All of Us Database
-    \item Downstream applications to studies with small sample sizes using Fitbit devices, such as our private heart failure dataset
-\end{projectlong}
+% \begin{projectlong}{A Fitbit foundation model}{Jan. 2025 - present}
+%     \item Developing a transformer based Fitbit foundation model using ~36k participants from the All of Us Database
+%     \item Downstream applications to studies with small sample sizes using Fitbit devices, such as our private heart failure dataset
+% \end{projectlong}
 
 % \begin{tabularx}{\linewidth}{ @{}l r@{} }
 % \textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
@@ -289,48 +328,42 @@ B.A. Computer Science& \hfill  \textit{GPA 3.74} \\
 % \end{tabularx}
 
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
 
-%----------------------------------------------------------------------------------------
-%	PATENTS
-%----------------------------------------------------------------------------------------
-\section{Patents}
-\begin{refsection}[patents.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
-
+% %----------------------------------------------------------------------------------------
+% %	PATENTS
+% %----------------------------------------------------------------------------------------
 % \section{Patents}
-% % apply local override for the *next* bibliography only
-% \AtNextBibliography{%
-%   \setcounter{maxnames}{8}%
-%   \setcounter{minnames}{8}%
-% }
-% \nocite{*} % if you want to include all patent entries
-% \printbibliography[heading=none, keyword=patent]
+% \begin{refsection}[patents.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
 
+% % \section{Patents}
+% % % apply local override for the *next* bibliography only
+% % \AtNextBibliography{%
+% %   \setcounter{maxnames}{8}%
+% %   \setcounter{minnames}{8}%
+% % }
+% % \nocite{*} % if you want to include all patent entries
+% % \printbibliography[heading=none, keyword=patent]
+
+\enlargethispage{3\baselineskip}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Deep learning & \normalsize{Self-supervised training, contrastive learning, multi-modal learning, Transformers, attention mechanisms, LLMs, CNNs}\\
-Technical &  \normalsize{Python, Pytorch, pandas, Java, SQL, C, C++,  numpy, Scipy, scikit-learn, git, openCV, OpenSlide, xTransformers, Hugging Face, Weights \& Biases} 
+Deep learning & \normalsize{Self-supervised training, contrastive learning, multi-modal learning, transformers, CNNs}\\
+Technical &  \normalsize{Python, Pytorch, pandas, SQL, C, numpy, Scipy, scikit-learn, git, openCV, OpenSlide, Hugging Face, Weights \& Biases} 
 \end{tabularx}
 % \begin{tabularx}{\linewidth}{@{}l X@{}}
 % Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
 % Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
 % \end{tabularx}
 
-\vfill
+
+% \vfill
 \center{\footnotesize Last updated: \today}
 
 \end{document}
