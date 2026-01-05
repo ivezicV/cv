@@ -148,7 +148,7 @@
     \textit{#3} & & \\[3.75pt]  
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=\scriptsize$\bullet$]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2.5pt,label=\scriptsize$\bullet$]
     }
     {
     \end{itemize}
@@ -157,15 +157,17 @@
 
 \newenvironment{projectlong}[2]
     {
+    \vspace{-0.3em}
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
     \textbf{#1} & \hfill &  #2 \\
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=\scriptsize$\bullet$]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2.5pt,label=\scriptsize$\bullet$]
     }
     {
     \end{itemize}
-    \end{minipage}    
+    \end{minipage}
+    \vspace{-0.3em}
     }
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -204,8 +206,10 @@
 
 
 % % Standard summary
-Ph.D student in Medical Informatics at UCLA with experience developing representation learning models for multimodal biomedical data, including cytology, ultrasound, and wearables. Demonstrated expertise in Python, PyTorch, and large-scale self-supervised learning. Proven track record in building scalable AI systems for healthcare applications, with a focus on improving model generalization and robustness in low-resource clinical settings. Proven track record of publications in top venues such as CVPR, MICCAI, and JAMIA.
+% Ph.D student in Medical Informatics at UCLA with experience developing representation learning frameworks for multimodal biomedical data, including digital cytology, wearables, ultrasound, and digital pathology. Demonstrated expertise in Python, PyTorch, and large-scale self-supervised learning. Proven track record in building scalable AI systems for healthcare applications, with a focus on improving model generalization and robustness in low-resource clinical settings. Strong publication record in top-tier venues such as CVPR, MICCAI, and JAMIA.
 
+% % dino summary
+Ph.D student (4th year) in Medical Informatics at UCLA with experience developing representation learning frameworks for multimodal biomedical data, including digital cytology, wearables, ultrasound, and digital pathology. Demonstrated expertise in Python, PyTorch, and large-scale self-supervised learning. Proven track record in building scalable AI systems for healthcare applications, with a focus on developing and improving foundation model generalization and robustness in low-resource clinical settings. Strong publication record in top-tier venues such as CVPR, MICCAI, and JAMIA.
 
 %Vulvai summary
 % Ph.D student in Medical Informatics at UCLA with experience developing representation learning models for multimodal biomedical data, including cytology, ultrasound, and wearable signals. Demonstrated expertise in representation learning, multimodal modeling, and large-scale self-supervised learning using Python and PyTorch. Proven track record in building robust, interpretable and scalable AI systems for healthcare applications, with a focus on improving model generalization and robustness in low-resource and understudied health domains. Motivated to apply this expertise toward personalized and evidence-based insights in women's health.
@@ -249,22 +253,27 @@ B.A. Computer Science& \hfill  \textit{GPA 3.74} \\
 %Experience
 \section{Experience}
 
-\begin{joblong}{Medical Informatics PhD Student - UCLA}{Sept 2022 - Present}{Biomedical AI Research Lab, University of California, Los Angeles}
-\item Developing an automated thyroid cancer diagnostic pipeline  using radiology and cytology image analysis
-\item Improving thyroid cancer risk stratification from cytological biopsy images with deep learning techniques
-\item Building a Fitbit foundation model by integrating temporal patterns with large language models
-\item Performing statistical analysis and predictive modeling on a private heart failure Fitbit dataset
+\begin{joblong}{PhD Student, Medical Informatics - UCLA}{Sept 2022 - Present}{Biomedical AI Research Lab, University of California, Los Angeles}
+\item Developing a novel automated multi-modal thyroid cancer diagnostic framework to aid clinical workflows
+\item Engineering self-supervised learning frameworks for interpretable and precise cytology image diagnostics 
+\item Pioneering a multi-modal physiological foundation model by aligning temporal physiological patterns with the electronic health record for personalized health interventions
+\item Leading collaborations (e.g. Mayo Clinic) to ensure clinical utility and biological relevance of models
 % \item Developing an automated assistance pipeline for thyroid cancer diagnosis 
 % \item Improving thyroid cancer risk stratification of cytological biopsy images using deep learning methods
 % \item Developing a foundational model for Fitbit data using large language models 
 % \item Statistics and predictive modeling for an in-house heart failure Fitbit dataset
 \end{joblong}
 
+\begin{joblong}{Human Factors (UX) Research Intern}{Jan. - June 2026}{VULVAI}
+\item Synthesizing qualitative insights from beta-testing to inform the iterative development of the AI-driven health interface
+\item Optimizing data acquisition protocols to collect high-fidelity datasets structured for future multi-modal diagnostic AI models
+\end{joblong}
+
 \begin{joblong}{Undergraduate Researcher}{Sept. 2020 - May 2022}{Troyanskaya Lab, Princeton University}
-\item Developed cell type–specific functional gene networks through Bayesian data integration to enhance gene prediction accuracy
-\item Leveraged machine learning to prioritize candidate genes relevant to kidney disease mechanisms
+% \item Developed cell type–specific functional gene networks through Bayesian data integration to enhance gene prediction accuracy
+\item Engineered cell type–specific Bayesian networks to enhance functional gene prediction accuracy
+\item Leveraged machine learning frameworks identify  molecular drivers of kidney disease
 \item Benchmarked cell type prediction methods across single-cell and single-nucleus RNA-seq datasets 
-\item Analyzed differential gene expression to identify molecular changes across diseased kidney cell types
 % \item Built cell type specific functional networks using Bayesian integration for gene prediction
 % \item Leveraged the networks and machine learning techniques to predict kidney disease relevant genes
 % \item Evaluated machine learning methods for cell type prediction in single cell and single nucleus sequencing data
@@ -275,22 +284,22 @@ B.A. Computer Science& \hfill  \textit{GPA 3.74} \\
 
 \begin{joblong}{Research Intern}{June 2021 - April 2022}{Jarosz Lab, Stanford University}
 \item Analyzed FASTQ sequencing data from yeast strains to identify gene essentiality and construct gene interaction networks
-\item Applied statistical and computational methods to evaluate gene correlations associated with prion phenotypes
+\item Applied statistical methods to evaluate gene correlations associated with prion phenotypes
 % \item Analyzed FASTQ data from yeast strains to identify gene essentiality and generate gene networks
 % \item Employed statistical methods to evaluate gene correlations with prion phenotypes
 \end{joblong}
 
-\begin{joblong}{Research Intern}{June 2019 - Aug. 2019}{Tolić Group, Insitute Ruder Bošković, Zagreb, Croatia}
-\item Imaged and analyzed mitotic spindles during pro-metaphase and metaphase to study spindle dynamics.
-% \item Examined and videoed mitotic spindles in pro-metaphase and metaphase
-\item Utilized transfection, cell splitting, and protein tagging methods to analyze PRC1 in pro-metaphase
-\end{joblong}
+% \begin{joblong}{Research Intern}{June 2019 - Aug. 2019}{Tolić Group, Insitute Ruder Bošković, Zagreb, Croatia}
+% \item Imaged and analyzed mitotic spindles during pro-metaphase and metaphase to study spindle dynamics.
+% % \item Examined and videoed mitotic spindles in pro-metaphase and metaphase
+% \item Utilized transfection, cell splitting, and protein tagging methods to analyze PRC1 in pro-metaphase
+% \end{joblong}
 
-\begin{joblong}{Research Intern}{June 2017 - Aug. 2017}{Intellectual Ventures Laboratory - Bellevue, WA}
-\item Co-Inventor: “Methods and System for Concentration of Samples for Lateral Flow Assays”
-\item Developed diagnostic assays to enable rapid and accurate identification of tuberculosis infection
-% \item Helped develop new diagnostics to accurately and rapidly identify tuberculosis infection
-\end{joblong}
+% \begin{joblong}{Research Intern}{June 2017 - Aug. 2017}{Intellectual Ventures Laboratory - Bellevue, WA}
+% \item Co-Inventor: “Methods and System for Concentration of Samples for Lateral Flow Assays”
+% \item Developed diagnostic assays to enable rapid and accurate identification of tuberculosis infection
+% % \item Helped develop new diagnostics to accurately and rapidly identify tuberculosis infection
+% \end{joblong}
 
 
 %----------------------------------------------------------------------------------------
@@ -304,16 +313,19 @@ B.A. Computer Science& \hfill  \textit{GPA 3.74} \\
 %     % \item Novel integration of ultrasound videos with radiological reports with application to improved cancer risk stratification
 % \end{projectlong}
 
-\begin{projectlong}{Robust cytological image representation learning}{Feb. 2025 - present}
+\begin{projectlong}{Cytology foundation model}{Feb. 2025 - present}
     \item Developed the first cytology foundation model using self-supervised learning 
-    \item Curated the largest cytology dataset of 1.4 million images using public and private datasets
-    \item Outperformed natural image and histopathology foundation models on 2 out of 3 tasks
+    \item Engineered a 1.4M image dataset using a custom pipeline to automate data cleaning and identify high-utility biological patches from public and private sources
+    \item Outperforms natural image and histopathology foundation models on classification of cervical cancer (+3\% accuracy) and cervical cell types (+4\% accuracy)
+    \item Captures unique morphological features with robust generalization to unseen multi-center datasets
+
 \end{projectlong}
 
-\begin{projectlong}{Wearable device adherence in heart failure patients}{Feb. 2023 - Sept. 2024}
-    \item Led data processing and statistical analysis for a randomized controlled trial 
-    \item Evaluated digital monitoring adherence in heart failure patients
-    \item Identified signal patterns and adherence trends from Fitbit and symptom-tracking survey data
+\begin{projectlong}{Fitbit foundation model}{Feb. 2023 - present}
+    \item Led multi-modal data engineering and statistical analysis for a heart failure randomized controlled trial 
+    \item Evaluated signal patterns from Fitbit and symptom-tracking survey data to characterize feasibility of longitudinal wearable data as a reliable clinical intervention for remote patient monitoring
+    \item Developing physiological phenotyping models for amenorrhea from physiological data and clinical measurements in collaboration with the Mayo clinic
+    \item Developing the first Fitbit foundation model for optimized representation learning of physiological patterns in sample limited datasets
 \end{projectlong}
 
 % \begin{projectlong}{A Fitbit foundation model}{Jan. 2025 - present}
@@ -354,7 +366,7 @@ B.A. Computer Science& \hfill  \textit{GPA 3.74} \\
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 Deep learning & \normalsize{Self-supervised training, contrastive learning, multi-modal learning, transformers, CNNs}\\
-Technical &  \normalsize{Python, Pytorch, pandas, SQL, C, numpy, Scipy, scikit-learn, git, openCV, OpenSlide, Hugging Face, Weights \& Biases} 
+Technical &  \normalsize{Python, Pytorch, pandas, SQL, numpy, Scipy, scikit-learn, Git, openCV, OpenSlide} 
 \end{tabularx}
 % \begin{tabularx}{\linewidth}{@{}l X@{}}
 % Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
